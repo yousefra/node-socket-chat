@@ -1,0 +1,104 @@
+* { 
+    outline: none;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(243, 247, 255);
+}
+
+.container {
+    height: 100%;
+    text-align: center;
+}
+
+header {
+    padding: 30px;
+}
+
+.form-control {
+    border: 0;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+    transition: .3s;
+}
+
+.form-control:focus {
+    box-shadow: 0px 2px 5px 1px #d8d8d8;
+    transition: .3s;
+}
+
+.form-control, .dashboard {
+    box-shadow: 0px 2px 5px 1px #eaeaea;
+}
+
+.form-control::placeholder {
+    color: #ababab;
+}
+
+.name, .message, .btn {
+    margin-bottom: 20px;
+}
+
+.message input {
+    width: 400px;
+}
+
+@media only screen and (max-width: 600px) {
+    .message input {
+        width: 300px;
+    }
+  }
+
+.btn {
+    border: 0;
+    width: 70px;
+    height: 30px;
+    background-color: rgb(63, 115, 236);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn:hover {
+    background-color: rgb(76, 127, 246);
+    transition: .3s;
+}
+
+.dashboard {
+    background-color: #fff;
+    margin: 0 50px;
+    min-height: 200px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.dashboard p {
+    margin: 0 0 10px 0;
+    animation: slide-down 0.4s ease;
+}
+
+.ready {
+    background-color: #00000000;
+    box-shadow: 0 0 0 0 #00000000;
+    transition: .4s;
+}
+
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        /* margin-top: 10px; */
+    }
+}
